@@ -17,7 +17,7 @@ function TopHeadlines() {
   console.log(data)
   
   return (
-    <div>
+    <div className='main-ctn'>
       {data?.articles.map((item, index) => {
 
        return (

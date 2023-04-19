@@ -44,13 +44,35 @@
 
 .news-img {
     z-index: 3;
-    width: 90vw;
+    width: 90%;
     border-radius: 10px;
     align-items: center;
     background-image: url(../assets/Nothing.jpg);
     
 }
+@media screen and (min-width: 768px) {
+    .main-ctn {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
 
+    .outside-ctn, .article-ctn, .news-img {
+        width: 100%;
+    }
+    .title-text {
+        font-size: 25px;
+        text-overflow: hidden;
+    }
+    .article-ctn {
+        text-overflow: hidden;
+    }
+    .news-img {
+        height: 100%;
+    }
+
+}
 
 @media screen and (max-width: 400px) {
     .title-text {

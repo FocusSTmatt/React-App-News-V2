@@ -1,10 +1,11 @@
 import React from 'react'
 import TopHeadlines from '../componenets/TopHeadlines'
+import NewsTest from '../componenets/NewsTest'
 
 const Headlines = () => {
   return (
     <div>
-      <TopHeadlines />
+      <NewsTest />
     </div>
   )
 }
