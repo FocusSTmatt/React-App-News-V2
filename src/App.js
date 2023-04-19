@@ -13,16 +13,16 @@ import Health from './pages/Health';
 import Science from './pages/Science';
 import Sports from './pages/Sports';
 import Technology from './pages/Technology';
-
+import Headlines from './pages/Headlines';
 
 function App() {
   return (
     <>
+      <BrowserRouter>
         <Navbar />
         <Header />
-        <TopHeadlines />
-        <Footer />
         <Routes>
+          <Route path="/" element={<Headlines />} />
           <Route path="/business" element={<Business />}/> 
           <Route path="/entertainment" element={<Entertainment/>}/> 
           <Route path="/general" element={<General/>}/> 
@@ -31,6 +31,8 @@ function App() {
           <Route path="/sports" element={<Sports/>}/> 
           <Route path="/technology" element={<Technology/>}/> 
         </Routes>
+        <Footer />
+      </BrowserRouter>
    </>
   )
 }

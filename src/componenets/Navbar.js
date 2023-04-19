@@ -32,6 +32,7 @@ const Navbar = () => {
       </div> 
     
       <div className="full-size-navbar-links">
+        <Link to="/">Headlines</Link>
         <Link to="/business">Business</Link>
         <Link to="/entertainment">Entertainment</Link>
         <Link to="/general">General</Link>
