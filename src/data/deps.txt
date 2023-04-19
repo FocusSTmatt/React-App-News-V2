@@ -1,0 +1,3 @@
+npm install --save react-dotdotdot
+npm install react-text-truncate
+npm install axios
