@@ -1,9 +1,10 @@
 import React from 'react'
+import SportsComp from '../componenets/SportsComp'
 
 const Sports = () => {
   return (
     <div>
-      <h1>sports</h1>
+      <SportsComp />
     </div>
   )
 }

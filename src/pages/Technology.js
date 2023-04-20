@@ -1,9 +1,10 @@
 import React from 'react'
+import TechnologyComp from '../componenets/TechnologyComp'
 
 const Technology = () => {
   return (
     <div>
-      <h1>technology</h1>
+      <TechnologyComp />
     </div>
   )
 }

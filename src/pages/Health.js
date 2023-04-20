@@ -1,9 +1,10 @@
 import React from 'react'
+import HealthComp from '../componenets/HealthComp'
 
 const Health = () => {
   return (
     <div>
-      <h1>health</h1>
+      <HealthComp />
     </div>
   )
 }

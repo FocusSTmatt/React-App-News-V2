@@ -1,9 +1,10 @@
 import React from 'react'
+import EntertainmentComp from '../componenets/EntertainmentComp'
 
 const Entertainment = () => {
   return (
     <div>
-      <h1>Entertainment</h1>
+      <EntertainmentComp/>
     </div>
   )
 }

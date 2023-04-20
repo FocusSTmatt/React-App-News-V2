@@ -1,9 +1,10 @@
 import React from 'react'
+import BusinessComp from '../componenets/BusinessComp'
 
 const Business = () => {
   return (
     <div>
-      <h1>business page</h1>
+      < BusinessComp />
     </div>
   )
 }

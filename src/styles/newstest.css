@@ -6,10 +6,9 @@
 
 .inside-ctn {
     position: relative;
-    background: black;
+    background: red;
     margin: 1em;
     border-radius: 10px;
-
 }
 
 .main-img {
@@ -26,10 +25,14 @@ border-top-left-radius: 10px;
     background: black;
     width: 100%;
     position: relative;
-    bottom: 0;
+    top: -10px;
     height: 50px;
+    border: none;
 }
-
+.title-btn-text:hover {
+    color: yellow;
+   ;
+}
 .title-btn-text {
     color: #fff;
     overflow: hidden;
@@ -55,8 +58,28 @@ border-top-left-radius: 10px;
     z-index: 10;
     top: 0;
     left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .content-text {
     margin: 1em;
+}
+
+.close-icon {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .main-ctn {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 2em;
+    }
+
+    .inside-ctn {
+        background: black;
+        margin-bottom: 1em;
+    }
+
 }

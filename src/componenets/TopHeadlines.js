@@ -1,6 +1,6 @@
 import React from 'react';
 import useFetch from '../useFetch';
-import "../styles/news.css"
+
 import Dotdotdot from 'react-dotdotdot'
 import {Link} from "react-router-dom"
 import { Img } from "react-image"

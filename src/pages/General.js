@@ -1,9 +1,10 @@
 import React from 'react'
+import GeneralComp from '../componenets/GeneralComp'
 
 const General = () => {
   return (
     <div>
-      <h1>General</h1>
+      <GeneralComp/>
     </div>
   )
 }

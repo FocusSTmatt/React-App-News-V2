@@ -5,7 +5,7 @@ import { Img } from "react-image"
 import notFound from "../assets/Nothing.jpg"
 import {IoMdClose} from "react-icons/io"
 
-function TopHeadlines() {
+function TechnologyComp() {
   const [isClicked, setIsClicked] = useState({
     activeObject: null,
   });
@@ -21,7 +21,7 @@ function TopHeadlines() {
     } else { return "content hidden" }
   }
  
- const {data, loading, error} = useFetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=ffb8136ba46542b3b04497ea8fc4a206")
+ const {data, loading, error} = useFetch("https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=ffb8136ba46542b3b04497ea8fc4a206")
   console.log(data)
  if (loading) return <h1>LOADING....</h1>
 
@@ -52,12 +52,13 @@ function TopHeadlines() {
   );
 }
 
-export default TopHeadlines;
+export default TechnologyComp;
 
 
 
  
  
+
 
 
 
