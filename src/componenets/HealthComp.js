@@ -32,7 +32,7 @@ function HealthComp() {
       {data?.articles.map((item, index) => {
         
       return (
-        <div className='inside-ctn' style={{background: "black"}}>  
+        <div key={index} className='inside-ctn' style={{background: "black"}}>  
                <a target="_blank" rel="noopener noreferrer" href={item.url}><Img className='main-img' 
                   alt="Related To Article" 
                   src={[item.urlToImage, notFound]} 

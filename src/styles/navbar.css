@@ -54,7 +54,7 @@ nav {
 }
 
 .drop-down-menu-links a:nth-of-type(1) {
-    margin-top: 1.5em;
+    margin-top: 0.5em;
 }
 .drop-down-menu-links {
     z-index: 100;

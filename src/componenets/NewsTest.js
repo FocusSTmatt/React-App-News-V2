@@ -11,14 +11,15 @@ function TopHeadlines() {
   });
 
   function handleClick(index){
+    document.getElementById("content").classList.add("slide-bottom")
     setIsClicked({activeObject: data.articles[index]});
     console.log(isClicked)
   }
 
   function toggleActiveStyles(index){
     if (data.articles[index] === isClicked.activeObject){
-      return "content visible"
-    } else { return "content hidden" }
+      return "content visible swirl-in-fwd"
+    } else { return "content hidden slide-bottom" }
   }
  
  const {data, loading, error} = useFetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=ffb8136ba46542b3b04497ea8fc4a206")
@@ -30,9 +31,8 @@ function TopHeadlines() {
   return (
     <div className='main-ctn'>
       {data?.articles.map((item, index) => {
-        
       return (
-        <div className='inside-ctn' style={{background: "black"}}>  
+        <div key={index} className='inside-ctn' style={{background: "black"}}>  
                <a target="_blank" rel="noopener noreferrer" href={item.url}><Img className='main-img' 
                   alt="Related To Article" 
                   src={[item.urlToImage, notFound]} 
@@ -41,11 +41,13 @@ function TopHeadlines() {
                   currentTarget.src="https://th.bing.com/th?id=OIP.BoU3RaYveiV_Rzvs8ibELAHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2";
               }}/></a>
               <button onClick={() => {handleClick(index)}} className='title-btn'><span className='title-btn-text'>{item.title}</span></button>
-            <div key={index} id="content" className={toggleActiveStyles(index)}>
-              <IoMdClose onClick={handleClick} className='close-icon' />
-              <p className='content-text'>{item.content}</p>
+              <div key={index} 
+                   id="content" 
+                   className={toggleActiveStyles(index)}>
+                <IoMdClose onClick={handleClick} className='close-icon' />
+                <p className='content-text'>{item.content}</p>
+              </div>
             </div>
-        </div>
         )
       })}
     </div>
